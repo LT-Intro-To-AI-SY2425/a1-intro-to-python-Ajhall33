@@ -25,6 +25,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
+    if(n>0):
+        return n
+    else:
+        return -1*n
     raise NotImplementedError("absolute")
 
 
@@ -38,6 +42,12 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
+    i = n
+    total = 1
+    while(i>0):
+        total *=i
+        i-=1
+    return total
     raise NotImplementedError("factorial")
 
 
@@ -55,6 +65,13 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
+    place = 0
+    list_length = len(lst)
+    every_other_list = []
+    while(place<list_length):
+        every_other_list.append(lst[place])
+        place += 2
+    return every_other_list
     raise NotImplementedError("every_other")
 
 
@@ -68,6 +85,13 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
+    total_count = 0
+    new_list_length = len(lst)
+    place = 0
+    while(place<new_list_length):
+        total_count += lst[place]
+        place += 1
+    return total_count
     raise NotImplementedError("sum_list")
 
 
@@ -80,6 +104,13 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
+    total_count = 0
+    list_length = len(lst)
+    place = 0
+    while(place<list_length):
+        total_count += lst[place]
+        place += 1
+    return total_count/list_length 
     raise NotImplementedError("mean")
 
 
@@ -93,8 +124,15 @@ def median(lst: List[int]) -> float:
         lst - an ordered list of numbers
 
     Returns:
-        the median of the passed in list
+        the median of the passed in list [1, 2, 3, 4, 5]
     """
+    list_length = len(lst)
+    above = (list_length//2)+1
+    below = (list_length//2)
+    if(list_length%2==0):
+        return lst[(above+below)/2]
+    else:
+        return lst[list_length//2]
     raise NotImplementedError("median")
 
 
@@ -112,11 +150,18 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     You may assume the list has 3+ names to start
 
     Args:
-        lst - a list of names (strings)
+        lst - a list of names (strings) ["roscoe", "kim", "solin", "law", "remess"]
 
     Returns:
         the resulting list after playing duck duck goose
     """
+    wrapping_count = 0
+    while(len(lst)>2):
+        wrapping_count += 2
+        if(wrapping_count > len(lst)-1):
+            wrapping_count = wrapping_count-(len(lst))
+        lst.pop(wrapping_count)
+    return lst
     raise NotImplementedError("duck_duck_goose")
 
 
