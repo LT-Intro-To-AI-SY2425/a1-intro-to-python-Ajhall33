@@ -13,11 +13,12 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 ## Reflection Questions
 
 1. What is your initial thoughts about the python programming language?
-
+I enjoy it as it is a fairly efficient and logical language.
 
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
-
+Similarly to java-script i dont have to choose a variable type when initializing. That is a difference from java and C. 
 
 
 3. What are some things that you learned through this assignment?
+I have learned the way to use pop, append, and length functions in this language as well as how to write conditionals and loops.
